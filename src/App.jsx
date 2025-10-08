@@ -60,7 +60,7 @@ function App() {
 			setMessage("🎉 You revealed the full quote!");
 			setGameOver(true);
 		} else if (attempts - 1 <= 0) {
-			setMessage("❌ Out of attempts. The quote was: " + puzzle.quote);
+			setMessage("❌ Out of attempts. The quote was: " + puzzle.quote + " and the author was: " + puzzle.author);
 			setGameOver(true);
 		}
 	}
@@ -75,7 +75,7 @@ function App() {
 		if (authorGuess === puzzle.author) {
 			setMessage("✅ Correct author: " + puzzle.author);
 		} else if (attempts - 1 <= 0) {
-			setMessage("❌ Out of attempts. The author was: " + puzzle.author);
+			setMessage("❌ Out of attempts. The quote was: " + puzzle.quote + " and the author was: " + puzzle.author);
 			setGameOver(true);
 		} else {
 			setMessage("Wrong author. Try again.");
